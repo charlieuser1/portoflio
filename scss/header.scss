@@ -1,0 +1,13 @@
+@use"general.scss";
+
+// Variables
+$primary-color: #0014c442;
+$secondary-color: #ffffff;
+$hover-color: #00e1ff;
+$text-shadow-color: rgba(0, 0, 0, 0.2);
+
+// Header Styles
+header {
+    box-shadow: 0px 4px 6px $text-shadow-color;
+
+}

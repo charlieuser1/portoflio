@@ -1,0 +1,36 @@
+*{
+    margin: 0 auto;
+    padding: 0 ;
+}
+// Variables
+$font-main: 'Arial', sans-serif;
+body{
+
+    font-family: $font-main;
+    color: aliceblue;
+    background: linear-gradient(black, #353535);
+}
+
+#boton-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Oculto por defecto */
+    z-index: 1000;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#boton-top:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+footer{
+    margin: 3%;
+}
