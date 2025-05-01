@@ -71,28 +71,39 @@ main.container section#proyectos .row h3 {
   font-size: 40px;
   font-weight: bold;
 }
-main.container section#proyectos .row div.col-lg-12 {
+main.container section#proyectos .row div.col-lg-6 {
   padding: 15px;
 }
-main.container section#proyectos .row div.col-lg-12 div.proyecto1 {
+main.container section#proyectos .row div.col-lg-6 div.proyecto1 {
   background-color: rgba(0, 0, 0, 0.368627451);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px rgba(255, 255, 255, 0.432);
 }
-main.container section#proyectos .row div.col-lg-12 div.proyecto1 div.preview img {
+main.container section#proyectos .row div.col-lg-6 div.proyecto1 div.preview img {
   width: 100%;
 }
-main.container section#proyectos .row div.col-lg-12 div.proyecto1 p {
+main.container section#proyectos .row div.col-lg-6 div.proyecto1 p {
   margin-left: 10%;
   margin-right: 10%;
   font-size: 20px;
 }
-main.container section#proyectos .row div.col-lg-12 div.proyecto1 .CTA {
-  margin-left: 10%;
+main.container section#proyectos .row div.col-lg-6 div.proyecto2 {
+  background-color: rgba(0, 0, 0, 0.368627451);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px rgba(255, 255, 255, 0.432);
+}
+main.container section#proyectos .row div.col-lg-6 div.proyecto2 .preview2 img {
+  width: 100%;
   margin-bottom: 5%;
 }
-main.container section#proyectos .row div.col-lg-12 div.proyecto1 .CTA a {
+main.container .CTA {
+  margin-left: 10%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+main.container .CTA a {
   background-color: rgba(0, 24, 241, 0.8901960784);
   text-decoration: none;
   font-size: 15px;
@@ -101,42 +112,67 @@ main.container section#proyectos .row div.col-lg-12 div.proyecto1 .CTA a {
   padding: 16px 10px;
   border-radius: 10px;
 }
-main.container section#proyectos .row div.col-lg-12 div.proyecto1 .CTA a:hover {
+main.container .CTA a:hover {
   box-shadow: 2px 2px rgba(128, 128, 128, 0.418);
   background-color: #007bff;
-}
-main.container section#proyectos .row div.col-lg-12 div.proyecto2 {
-  background-color: rgba(0, 0, 0, 0.368627451);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 2px 2px rgba(255, 255, 255, 0.432);
 }
 main.container section#habilidades h2.text-center {
   border-bottom: #515252 solid;
   padding-top: 5%;
   margin-bottom: 5%;
 }
+main.container section#habilidades ul li {
+  margin-top: 5%;
+}
 main.container section#habilidades .row {
   border-radius: 10px;
 }
-main.container section#habilidades .row div.col-lg-6 {
+main.container section#habilidades .row .wireframe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+main.container section#habilidades .row .wireframe img {
+  width: auto;
+  height: 100%;
+}
+main.container section#habilidades .row .arquitectura img {
+  border-radius: 10px;
+}
+main.container section#habilidades .row .herramientas {
+  display: flex;
+  margin: 10%;
+}
+main.container section#habilidades .row .herramientas img {
+  border-radius: 10px;
+  width: 20%;
+}
+main.container section#habilidades .row .users img {
+  width: 100%;
+}
+main.container section#habilidades .row div.col-lg-12 {
   gap: 20px;
   margin-top: 5%;
 }
-main.container section#habilidades .row div.col-lg-6 h3.text-center {
+main.container section#habilidades .row div.col-lg-12 h3.text-center {
   font-weight: bolder;
 }
-main.container section#habilidades .row div.col-lg-6 .ux-ui {
+main.container section#habilidades .row div.col-lg-12 .ux-ui {
   padding: 20px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.368627451);
   box-shadow: 2px 2px rgba(255, 255, 255, 0.432);
 }
-main.container section#habilidades .row div.col-lg-6 .Desarrollo_web {
+main.container section#habilidades .row div.col-lg-12 .Desarrollo_web {
   padding: 20px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.368627451);
   box-shadow: 2px 2px rgba(255, 255, 255, 0.432);
+}
+
+main .reporte img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
