@@ -71,30 +71,30 @@ main.container section#proyectos .row h3 {
   font-size: 40px;
   font-weight: bold;
 }
-main.container section#proyectos .row div.col-lg-6 {
+main.container section#proyectos .row div.col-lg-12 {
   padding: 15px;
 }
-main.container section#proyectos .row div.col-lg-6 div.proyecto1 {
+main.container section#proyectos .row div.col-lg-12 div.proyecto1 {
   background-color: rgba(0, 0, 0, 0.368627451);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px rgba(255, 255, 255, 0.432);
 }
-main.container section#proyectos .row div.col-lg-6 div.proyecto1 div.preview img {
+main.container section#proyectos .row div.col-lg-12 div.proyecto1 div.preview img {
   width: 100%;
 }
-main.container section#proyectos .row div.col-lg-6 div.proyecto1 p {
+main.container section#proyectos .row div.col-lg-12 div.proyecto1 p {
   margin-left: 10%;
   margin-right: 10%;
   font-size: 20px;
 }
-main.container section#proyectos .row div.col-lg-6 div.proyecto2 {
+main.container section#proyectos .row div.col-lg-12 div.proyecto2 {
   background-color: rgba(0, 0, 0, 0.368627451);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 2px 2px rgba(255, 255, 255, 0.432);
 }
-main.container section#proyectos .row div.col-lg-6 div.proyecto2 .preview2 img {
+main.container section#proyectos .row div.col-lg-12 div.proyecto2 .preview2 img {
   width: 100%;
   margin-bottom: 5%;
 }
