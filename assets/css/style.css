@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0 auto;
   padding: 0;
@@ -5,8 +6,7 @@
 
 body {
   font-family: "Arial", sans-serif;
-  color: aliceblue;
-  background: linear-gradient(black, #353535);
+  background: aliceblue;
 }
 
 #boton-top {
@@ -29,150 +29,322 @@ body {
 }
 
 footer {
-  margin: 3%;
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
 }
 
 header {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
+header .navbar {
+  background: aliceblue;
+}
+header .navbar .navbar-toggler {
+  border-color: rgb(112, 112, 112);
+  border-width: 2px;
+}
+header .navbar .navbar-toggler-icon {
+  border-color: aqua;
+}
+header .navbar .navbar-brand {
+  font-size: 20px;
+  font-weight: 300;
+}
+header .navbar .navbar-brand:hover {
+  color: rgb(255, 79, 79);
+}
+header .navbar .nav-link {
+  color: black;
+  font-weight: bold;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.062);
+}
+header .navbar .nav-link:hover {
+  color: rgb(4, 0, 255);
+}
 
-main.container {
-  margin-top: 20%;
-  /*Seccion de presentacion*/
-  /*Seccion de proyectos*/
-  /*Seccion de Habilidades*/
+* {
+  margin: 0 auto;
+  padding: 0;
 }
-main.container h2.Title {
-  font-weight: bolder;
-  font-size: xxx-large;
-  text-shadow: 2px 2px rgba(240, 248, 255, 0.356);
-  color: aliceblue;
-  margin-bottom: 8%;
+
+/*card*/
+.card’s {
+  display: flex;
+  gap: 10px;
+  margin: 8px 8px;
 }
-main.container section.sobre-mi .row .col-12 .text-center {
-  font-size: 20px;
-}
-main.container .Proyectos_Title {
-  font-size: 40px;
-  font-weight: bold;
-  margin-top: 10%;
-  padding-bottom: 2%;
-  color: aliceblue;
-  text-shadow: 2px 2px rgba(240, 248, 255, 0.356);
-}
-main.container section#proyectos .Title-G {
-  border-bottom: #515252 solid;
-}
-main.container section#proyectos .row {
-  margin-top: 10%;
-}
-main.container section#proyectos .row h3 {
-  margin-left: 10%;
-  font-size: 40px;
-  font-weight: bold;
-}
-main.container section#proyectos .row div.col-lg-6 {
-  padding: 15px;
-}
-main.container section#proyectos .row div.col-lg-6 div.proyecto1 {
-  background-color: rgba(0, 0, 0, 0.368627451);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 2px 2px rgba(255, 255, 255, 0.432);
-}
-main.container section#proyectos .row div.col-lg-6 div.proyecto1 div.preview img {
-  width: 100%;
-}
-main.container section#proyectos .row div.col-lg-6 div.proyecto1 p {
-  margin-left: 10%;
-  margin-right: 10%;
-  font-size: 20px;
-}
-main.container section#proyectos .row div.col-lg-6 div.proyecto2 {
-  background-color: rgba(0, 0, 0, 0.368627451);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 2px 2px rgba(255, 255, 255, 0.432);
-}
-main.container section#proyectos .row div.col-lg-6 div.proyecto2 .preview2 img {
-  width: 100%;
-  margin-bottom: 5%;
-}
-main.container .CTA {
-  margin-left: 10%;
-  margin-bottom: 5%;
-  margin-top: 5%;
-}
-main.container .CTA a {
-  background-color: rgba(0, 24, 241, 0.8901960784);
-  text-decoration: none;
-  font-size: 15px;
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  padding: 16px 10px;
-  border-radius: 10px;
-}
-main.container .CTA a:hover {
-  box-shadow: 2px 2px rgba(128, 128, 128, 0.418);
+
+main .carousel-indicators [data-bs-target] {
   background-color: #007bff;
+  /* Cambia este color al que desees. Ejemplo: azul de Bootstrap */
 }
-main.container section#habilidades h2.text-center {
-  border-bottom: #515252 solid;
-  padding-top: 5%;
-  margin-bottom: 5%;
+main .carousel-indicators .active {
+  background-color: #28a745;
+  /* Color para el indicador activo. Ejemplo: verde de Bootstrap */
 }
-main.container section#habilidades ul li {
-  margin-top: 5%;
-}
-main.container section#habilidades .row {
+main .presentacion {
+  margin: 10px;
+  background-color: darkblue;
   border-radius: 10px;
+  padding: 10px 16px;
 }
-main.container section#habilidades .row .wireframe {
+main .presentacion h1 {
+  font-size: larger;
+  font-weight: bold;
+  color: yellow;
+}
+main .presentacion p {
+  color: aliceblue;
+  font-weight: bold;
+}
+main .presentacion .CTA {
+  margin-left: 10px;
+  display: inline;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: black;
+  border-width: 2px;
+  border-color: yellow;
+  border-style: double;
+}
+main .presentacion .CTA a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: bold;
+}
+main .gallery {
+  border-radius: 10px;
+  margin: 10px;
+  background-color: rgb(0, 140, 255);
+  /*bg1*/
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
 }
-main.container section#habilidades .row .wireframe img {
-  width: auto;
-  height: 100%;
-}
-main.container section#habilidades .row .arquitectura img {
+main .gallery .card {
+  min-width: 31%;
+  margin: 20px;
+  background-color: rgb(29, 29, 29);
+  /*cambiar por bg1*/
+  padding: 10px;
   border-radius: 10px;
 }
-main.container section#habilidades .row .herramientas {
-  display: flex;
-  margin: 10%;
-}
-main.container section#habilidades .row .herramientas img {
-  border-radius: 10px;
-  width: 20%;
-}
-main.container section#habilidades .row .users img {
+main .gallery .card p {
   width: 100%;
+  font-size: 18px;
+  color: aliceblue;
 }
-main.container section#habilidades .row div.col-lg-12 {
-  gap: 20px;
-  margin-top: 5%;
+main .gallery .card img {
+  max-width: 100%;
+  height: auto;
 }
-main.container section#habilidades .row div.col-lg-12 h3.text-center {
-  font-weight: bolder;
+main .gallery .card .aw {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
-main.container section#habilidades .row div.col-lg-12 .ux-ui {
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.368627451);
-  box-shadow: 2px 2px rgba(255, 255, 255, 0.432);
+main .gallery .card .aw img {
+  max-width: 45%;
+  height: auto;
 }
-main.container section#habilidades .row div.col-lg-12 .Desarrollo_web {
-  padding: 20px;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.368627451);
-  box-shadow: 2px 2px rgba(255, 255, 255, 0.432);
+main .gallery .card .fn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+main .gallery .card .fn img {
+  max-width: 45%;
+  height: fit-content;
 }
 
-main .reporte img {
+main {
+  overflow: hidden;
+}
+main .habilidades .Title-G {
+  margin: 10px;
+}
+main .habilidades .Title-G h2 {
+  text-decoration: underline;
+  font-weight: bold;
+}
+main .habilidades .row h3 {
+  margin-left: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+}
+main .habilidades .row .l1 {
+  border-radius: 10px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin: 10px;
+}
+main .habilidades .row .l2 {
+  border-radius: 10px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin: 10px;
+}
+main .habilidades .row .l3 {
+  border-radius: 10px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin: 10px;
+}
+main .habilidades .row .l4 {
+  border-radius: 10px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin: 10px;
+}
+main .habilidades .row .l4 img {
   width: 100%;
+  height: auto;
+}
+main .habilidades .row .l5 {
+  border-radius: 10px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin: 10px;
+}
+main .habilidades .row .d1 {
+  border-radius: 10px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin: 10px;
+}
+main .habilidades .row .d2 {
+  border-radius: 10px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin: 10px;
+}
+main .habilidades .row .d3 {
+  border-radius: 10px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin: 10px;
+}
+main .habilidades .row .d4 {
+  border-radius: 10px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin: 10px;
+}
+main .habilidades .row .d5 {
+  border-radius: 10px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin: 10px;
+}
+main .habilidades .row .d6 {
+  border-radius: 10px;
+  border-color: grey;
+  border-width: 1px;
+  border-style: solid;
+  padding: 10px;
+  background-color: whitesmoke;
+  margin: 10px;
+}
+main .display {
+  height: auto;
+  padding: 20px;
+  background: url(https://img.goodfon.com/original/2560x1440/0/d3/wallpapers-firewatch-2560-1440-windows-mac-linux.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+}
+main .display .cont {
+  background-color: rgba(0, 25, 51, 0.6156862745);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+main .display .cont h2 {
+  font-weight: bolder;
+  color: rgb(110, 113, 255);
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.514);
+  font-size: 40px;
+}
+main .display .cont p {
+  font-size: 20px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.322);
+  font-weight: bold;
+  color: white;
+}
+main .display .cont form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .display .cont form label {
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 22px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.514);
+}
+main .display .cont form input {
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+main .display .cont form button {
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: #28a745;
+  font-weight: bold;
+  color: white;
+}
+
+@media screen and (max-width: 850px) {
+  main .gallery {
+    flex-direction: column;
+  }
+  .card’s {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 8px 8px;
+  }
+}
+main .display {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */

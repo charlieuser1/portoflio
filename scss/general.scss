@@ -7,8 +7,7 @@ $font-main: 'Arial', sans-serif;
 body{
 
     font-family: $font-main;
-    color: aliceblue;
-    background: linear-gradient(black, #353535);
+    background: aliceblue;
 }
 
 #boton-top {
@@ -31,6 +30,55 @@ body{
 }
 
 
-footer{
-    margin: 3%;
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+}
+
+
+// Variables
+$primary-color: #0014c442;
+$secondary-color: #ffffff;
+$hover-color: #00e1ff;
+$text-shadow-color: rgba(0, 0, 0, 0.2);
+
+// Header Styles
+header {
+    box-shadow: 0px 4px 6px $text-shadow-color;
+
+    .navbar {
+        background: aliceblue;
+
+        .navbar-toggler {
+            border-color: rgb(112, 112, 112);
+            border-width: 2px;
+        }
+
+        .navbar-toggler-icon {
+            border-color: aqua;
+        }
+
+        .navbar-brand {
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        .navbar-brand:hover {
+            color: rgb(255, 79, 79);
+        }
+
+        .nav-link {
+            color: black;
+            font-weight: bold;
+            text-shadow: 2px 2px rgba(0, 0, 0, 0.062);
+        }
+
+        .nav-link:hover {
+            color: rgb(4, 0, 255);
+        }
+    }
 }
