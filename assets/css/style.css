@@ -91,6 +91,10 @@ main .presentacion {
   background-color: darkblue;
   border-radius: 10px;
   padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
 }
 main .presentacion h1 {
   font-size: larger;
@@ -115,6 +119,7 @@ main .presentacion .CTA a {
   text-decoration: none;
   color: aliceblue;
   font-weight: bold;
+  text-wrap: nowrap;
 }
 main .gallery {
   border-radius: 10px;
