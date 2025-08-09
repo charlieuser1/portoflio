@@ -94,7 +94,6 @@ main .presentacion {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-
 }
 main .presentacion h1 {
   font-size: larger;
@@ -338,6 +337,10 @@ main .display .cont form button {
 
 @media screen and (max-width: 850px) {
   main .gallery {
+    flex-direction: column;
+  }
+  main .index1 .parent {
+    display: flex;
     flex-direction: column;
   }
   .card’s {

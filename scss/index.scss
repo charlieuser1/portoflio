@@ -148,7 +148,7 @@ main {
             }
 
             .l2 {
-                
+
                 border-radius: 10px;
                 border-color: grey;
                 border-width: 1px;
@@ -192,7 +192,8 @@ main {
                 background-color: whitesmoke;
                 margin: 10px;
             }
-            .d1{
+
+            .d1 {
                 border-radius: 10px;
                 border-color: grey;
                 border-width: 1px;
@@ -201,7 +202,8 @@ main {
                 background-color: whitesmoke;
                 margin: 10px;
             }
-            .d2{
+
+            .d2 {
                 border-radius: 10px;
                 border-color: grey;
                 border-width: 1px;
@@ -210,7 +212,8 @@ main {
                 background-color: whitesmoke;
                 margin: 10px;
             }
-            .d3{
+
+            .d3 {
                 border-radius: 10px;
                 border-color: grey;
                 border-width: 1px;
@@ -219,7 +222,8 @@ main {
                 background-color: whitesmoke;
                 margin: 10px;
             }
-            .d4{
+
+            .d4 {
                 border-radius: 10px;
                 border-color: grey;
                 border-width: 1px;
@@ -228,7 +232,8 @@ main {
                 background-color: whitesmoke;
                 margin: 10px;
             }
-            .d5{
+
+            .d5 {
                 border-radius: 10px;
                 border-color: grey;
                 border-width: 1px;
@@ -237,7 +242,8 @@ main {
                 background-color: whitesmoke;
                 margin: 10px;
             }
-            .d6{
+
+            .d6 {
                 border-radius: 10px;
                 border-color: grey;
                 border-width: 1px;
@@ -246,7 +252,7 @@ main {
                 background-color: whitesmoke;
                 margin: 10px;
             }
-            
+
         }
 
     }
@@ -317,7 +323,14 @@ main {
         .gallery {
             flex-direction: column;
         }
+        .index1{
+            .parent{
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
+
 
     .card’s {
         display: flex;
@@ -326,7 +339,6 @@ main {
         margin: 8px 8px;
     }
 }
-
 main {
     .display {
         display: flex;
