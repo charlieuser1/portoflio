@@ -1,0 +1,67 @@
+@charset "UTF-8";
+.containerr {
+  display: grid;
+  grid-template-rows: 80px auto 1fr auto 50px;
+  grid-template-columns: 1fr 4fr 1fr;
+  height: 100vh;
+  grid-template-areas: "header header header" "left-aside banner right-aside" "left-aside main right-aside" "left-aside low-content right-aside" "footer footer footer";
+  grid-gap: 10px;
+  padding: 0px 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.containerr header {
+  grid-area: header;
+}
+.containerr .banner {
+  background-color: red;
+  grid-area: banner;
+}
+.containerr .left-aside {
+  background-color: rgb(191, 198, 255);
+  grid-area: left-aside;
+}
+.containerr .left-aside .card {
+  background-color: white;
+  padding: 5px;
+  margin: 5px;
+}
+.containerr .left-aside .card a {
+  font-size: 18px;
+  text-decoration: none;
+}
+.containerr .left-aside .card p {
+  font-size: 18px;
+}
+.containerr main {
+  background-color: blue;
+  grid-area: main;
+  display: flex;
+}
+.containerr main .card’s {
+  display: flex;
+  gap: 10px;
+  margin: 8px 8px;
+}
+.containerr .right-aside {
+  background-color: orange;
+  grid-area: right-aside;
+}
+.containerr .low-content {
+  background-color: brown;
+  grid-area: low-content;
+}
+.containerr footer {
+  background-color: aqua;
+  grid-area: footer;
+}
+
+@media (max-width: 678px) {
+  .containerr {
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "banner" "left-aside" "main" "right-aside" "low-content" "footer";
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
