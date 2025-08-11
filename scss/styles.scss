@@ -21,7 +21,7 @@
             overflow-y: scroll;
             position: relative;
             margin: 10px;
-            height: 80vh;
+            height: 75vh;
 
             .card {
                 background-color: white;
@@ -50,7 +50,7 @@
                 }
 
                 p {
-                    font-size: 15px;
+                    font-size: medium;
                 }
             }
         }
@@ -99,7 +99,7 @@
             overflow-y: scroll;
             position: relative;
             margin: 10px;
-            height: 80vh;
+            height: 70vh;
 
             .card {
                 background-color: white;
@@ -128,7 +128,7 @@
                 }
 
                 p {
-                    font-size: 15px;
+                    font-size:medium;
                 }
             }
         }
@@ -139,26 +139,30 @@
         grid-area: low-content;
     }
 
-    footer {
-        grid-area: footer;
-
-        p {
-            text-shadow: 3px 3px 3px rgb(189, 187, 187);
-        }
-    }
-
     display: grid;
     grid-template-rows: 80px auto 1fr auto 50px;
     grid-template-columns: 1fr 4fr 1fr;
     height: 100vh;
     grid-template-areas: "left-aside banner right-aside"
     "left-aside main right-aside"
-    "left-aside low-content right-aside"
-    "footer footer footer";
+    "left-aside low-content right-aside";
     grid-gap: 10px;
     padding: 0px 10px;
     font-weight: 600;
     font-size: 20px;
+}
+
+footer {
+    align-content: center;
+    height: 50px;
+    grid-area: footer;
+    background-color: gray;
+
+    p {
+        color: white;
+        text-align: center;
+        text-shadow: 3px 3px 3px rgb(189, 187, 187);
+    }
 }
 
 
