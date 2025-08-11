@@ -1,6 +1,6 @@
 .containerr {
   display: grid;
-  grid-template-rows: 80px auto 1fr auto 50px;
+  grid-template-rows: auto auto auto;
   grid-template-columns: 1fr 4fr 1fr;
   height: 100vh;
   grid-template-areas: "left-aside banner right-aside" "left-aside main right-aside" "left-aside low-content right-aside";
@@ -13,21 +13,60 @@
   grid-area: header;
 }
 .containerr .banner {
-  background-color: red;
+  border-color: grey;
+  border-radius: 10px;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 3px 3px 3px grey;
+  background-color: white;
+  padding: 10px;
   grid-area: banner;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.containerr .banner .gallery-t {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+.containerr .banner .gallery-t .card {
+  width: 100%;
+  height: fit-content;
+}
+.containerr .banner .gallery-t .card p {
+  margin: 3%;
+  font-size: medium;
+}
+.containerr .banner .gallery-t .card a {
+  margin: 3%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+  top: 10px;
+  right: 10px;
+  background-color: #28a745;
+  /* Verde tipo Bootstrap */
+  color: white;
+  border: none;
+  padding: 8px 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .containerr .left-aside {
   grid-area: left-aside;
 }
+.containerr .left-aside h4 {
+  font-size: large;
+}
 .containerr .left-aside .scroll {
   box-shadow: 4px 4px 5px rgba(128, 128, 128, 0.575);
-  border-radius: 10px;
-  border-width: 2px;
+  border-radius: 0px;
+  border-width: 1px;
   border-style: solid;
   border-color: rgba(34, 64, 161, 0.459);
   background-color: aliceblue;
   overflow-y: scroll;
-  position: relative;
   margin: 10px;
   height: 75vh;
 }
@@ -66,33 +105,23 @@
   border-radius: 4px;
 }
 .containerr main {
-  height: fit-content;
   background-color: rgba(0, 0, 255, 0.342);
   grid-area: main;
-  padding: 10px;
-}
-.containerr main .gallery-p {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto;
-}
-.containerr main .gallery-p .card {
-  width: 100%;
-  height: fit-content;
 }
 .containerr .right-aside {
   grid-area: right-aside;
 }
+.containerr .right-aside h4 {
+  font-size: large;
+}
 .containerr .right-aside .scroll {
   box-shadow: 4px 4px 5px rgba(128, 128, 128, 0.575);
-  border-radius: 10px;
-  border-width: 2px;
+  border-radius: 0px;
+  border-width: 1px;
   border-style: solid;
   border-color: rgba(34, 64, 161, 0.459);
   background-color: aliceblue;
   overflow-y: scroll;
-  position: relative;
   margin: 10px;
   height: 70vh;
 }
@@ -124,14 +153,26 @@
   font-size: medium;
 }
 .containerr .low-content {
-  background-color: brown;
   grid-area: low-content;
+  padding: 10px;
+}
+.containerr .low-content .gallery-p {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+}
+.containerr .low-content .gallery-p .card {
+  width: 100%;
+  height: fit-content;
+}
+.containerr .low-content .gallery-p .card p {
+  font-size: medium;
 }
 
 footer {
   align-content: center;
   height: 50px;
-  grid-area: footer;
   background-color: gray;
 }
 footer p {
@@ -142,14 +183,18 @@ footer p {
 
 @media (max-width: 678px) {
   .containerr {
-    height: 100vh;
-    grid-template-rows: auto auto auto auto auto auto auto;
+    height: auto;
+    grid-template-rows: auto auto auto auto auto;
     grid-template-columns: 1fr;
-    grid-template-areas: "header" "banner" "left-aside" "main" "right-aside" "low-content" "footer";
+    grid-template-areas: "banner" "left-aside" "main" "right-aside" "low-content";
   }
   .containerr .left-aside {
     margin: 10px;
-    height: 50vh;
+    height: auto;
+  }
+  .containerr .right-aside {
+    margin: 10px;
+    height: auto;
   }
 }
 
