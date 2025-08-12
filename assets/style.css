@@ -62,7 +62,7 @@ header .navbar .navbar-toggler-icon {
   grid-area: header;
 }
 .containerr .banner {
-  max-height: 30vh;
+  max-height: 100vh;
   border-color: grey;
   border-radius: 10px;
   border-width: 1px;
@@ -409,6 +409,84 @@ footer p {
   padding: 10px;
   background-color: whitesmoke;
   margin: 10px;
+}
+
+main .presentacion {
+  margin: 10px;
+  background-color: darkblue;
+  border-radius: 10px;
+  padding: 10px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+main .presentacion h1 {
+  font-size: larger;
+  font-weight: bold;
+  color: yellow;
+}
+main .presentacion p {
+  color: aliceblue;
+  font-weight: bold;
+}
+main .presentacion .CTA {
+  margin-left: 10px;
+  display: inline;
+  padding: 8px 16px;
+  border-radius: 10px;
+  background-color: black;
+  border-width: 2px;
+  border-color: yellow;
+  border-style: double;
+}
+main .presentacion .CTA a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: bold;
+  text-wrap: nowrap;
+}
+main .gallery {
+  border-radius: 10px;
+  margin: 10px;
+  background-color: rgb(0, 140, 255);
+  /*bg1*/
+  display: flex;
+  flex-wrap: wrap;
+}
+main .gallery .card {
+  min-width: 31%;
+  margin: 20px;
+  background-color: rgb(29, 29, 29);
+  /*cambiar por bg1*/
+  padding: 10px;
+  border-radius: 10px;
+}
+main .gallery .card p {
+  width: 100%;
+  font-size: 18px;
+  color: aliceblue;
+}
+main .gallery .card img {
+  max-width: 100%;
+  height: auto;
+}
+main .gallery .card .aw {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+main .gallery .card .aw img {
+  max-width: 45%;
+  height: auto;
+}
+main .gallery .card .fn {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+main .gallery .card .fn img {
+  max-width: 45%;
+  height: fit-content;
 }
 
 @media (max-width: 678px) {
