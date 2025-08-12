@@ -356,6 +356,149 @@ footer {
     }
 }
 
+.habilidades {
+    h2{
+        color: white;
+    }
+    h3{
+        color: white;
+    }
+    .Title-G {
+        margin: 10px;
+
+        h2 {
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    }
+
+    .row {
+        h3 {
+            margin-left: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+        }
+
+        .l1 {
+            border-radius: 10px;
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+            padding: 10px;
+            background-color: whitesmoke;
+            margin: 10px;
+        }
+
+        .l2 {
+
+            border-radius: 10px;
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+            padding: 10px;
+            background-color: whitesmoke;
+            margin: 10px;
+        }
+
+        .l3 {
+            border-radius: 10px;
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+            padding: 10px;
+            background-color: whitesmoke;
+            margin: 10px;
+        }
+
+        .l4 {
+            border-radius: 10px;
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+            padding: 10px;
+            background-color: whitesmoke;
+            margin: 10px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .l5 {
+            border-radius: 10px;
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+            padding: 10px;
+            background-color: whitesmoke;
+            margin: 10px;
+        }
+
+        .d1 {
+            border-radius: 10px;
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+            padding: 10px;
+            background-color: whitesmoke;
+            margin: 10px;
+        }
+
+        .d2 {
+            border-radius: 10px;
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+            padding: 10px;
+            background-color: whitesmoke;
+            margin: 10px;
+        }
+
+        .d3 {
+            border-radius: 10px;
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+            padding: 10px;
+            background-color: whitesmoke;
+            margin: 10px;
+        }
+
+        .d4 {
+            border-radius: 10px;
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+            padding: 10px;
+            background-color: whitesmoke;
+            margin: 10px;
+        }
+
+        .d5 {
+            border-radius: 10px;
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+            padding: 10px;
+            background-color: whitesmoke;
+            margin: 10px;
+        }
+
+        .d6 {
+            border-radius: 10px;
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+            padding: 10px;
+            background-color: whitesmoke;
+            margin: 10px;
+        }
+
+    }
+
+}
 
 @media (max-width: 678px) {
     .containerr {
