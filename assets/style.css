@@ -1,8 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background: linear-gradient(-45deg, #2c003e, #0a4b69, #270b74, #2c003e);
+  background-size: 400% 400%;
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+header .navbar {
+  background-color: transparent;
+}
+header .navbar .navbar-brand {
+  color: #00ff4c;
+  font-weight: bold;
+}
+header .navbar .navbar-brand:hover {
+  color: #ffffff;
+}
+header .navbar li {
+  font-weight: bold;
+}
+header .navbar .nav-link {
+  color: #e4e1e1;
+}
+header .navbar .nav-link.active {
+  color: #00ff4c;
+}
+header .navbar .nav-link:hover {
+  color: #ffffff;
+}
+header .navbar .navbar-toggler-icon {
+  filter: invert(100%);
+}
+
 .containerr {
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr 4fr 1fr;
-  height: 100vh;
+  height: auto;
   grid-template-areas: "left-aside banner right-aside" "left-aside main right-aside" "left-aside low-content right-aside";
   grid-gap: 10px;
   padding: 0px 10px;
@@ -13,6 +62,7 @@
   grid-area: header;
 }
 .containerr .banner {
+  max-height: 30vh;
   border-color: grey;
   border-radius: 10px;
   border-width: 1px;
@@ -56,29 +106,16 @@
 .containerr .left-aside {
   grid-area: left-aside;
 }
-.containerr .left-aside h4 {
-  font-size: large;
-}
-.containerr .left-aside .scroll {
-  box-shadow: 4px 4px 5px rgba(128, 128, 128, 0.575);
-  border-radius: 0px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(34, 64, 161, 0.459);
-  background-color: aliceblue;
-  overflow-y: scroll;
-  margin: 10px;
-  height: 75vh;
-}
-.containerr .left-aside .scroll .card {
+.containerr .left-aside .card {
   background-color: white;
   padding: 5px;
   margin: 5px;
 }
-.containerr .left-aside .scroll .card a {
+.containerr .left-aside .card summary {
+  transition: all 1s ease;
   text-align: center;
   text-decoration: none;
-  font-size: 18px;
+  font-size: small;
   top: 10px;
   right: 10px;
   background-color: #28a745;
@@ -91,11 +128,16 @@
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.containerr .left-aside .scroll .card a:hover {
-  background-color: #0c7425;
+.containerr .left-aside .card summary:hover {
+  background-color: #0f8f2d;
 }
-.containerr .left-aside .scroll .card p {
-  font-size: medium;
+.containerr .left-aside .card p {
+  font-size: small;
+}
+.containerr .left-aside h4 {
+  font-size: large;
+  color: white;
+  font-weight: bold;
 }
 .containerr .left-aside::-webkit-scrollbar {
   width: 4px;
@@ -105,35 +147,83 @@
   border-radius: 4px;
 }
 .containerr main {
-  background-color: rgba(0, 0, 255, 0.342);
+  border-radius: 20px;
+  box-shadow: 2px 2px 3px grey;
+  background-color: white;
   grid-area: main;
+  padding: 20px;
+}
+.containerr main button {
+  margin-top: 25px;
+  padding: 12px;
+  background-color: #ff00cc;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.containerr main button:hover {
+  background-color: #e600b5;
+}
+.containerr main h2 {
+  font-size: larger;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.containerr main p {
+  font-size: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.containerr main form {
+  display: flex;
+  flex-direction: column;
+}
+.containerr main form label {
+  margin-top: 15px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ff99dd;
+}
+.containerr main form input,
+.containerr main form textarea {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background-color: #1e1e2f;
+  color: #fff;
+  font-size: 15px;
+  transition: box-shadow 0.3s ease;
+}
+.containerr main form input::placeholder,
+.containerr main form textarea::placeholder {
+  color: #aaa;
+}
+.containerr main form input:focus,
+.containerr main form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px #04924b;
+}
+.containerr main form textarea {
+  resize: none;
 }
 .containerr .right-aside {
   grid-area: right-aside;
 }
-.containerr .right-aside h4 {
-  font-size: large;
-}
-.containerr .right-aside .scroll {
-  box-shadow: 4px 4px 5px rgba(128, 128, 128, 0.575);
-  border-radius: 0px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgba(34, 64, 161, 0.459);
-  background-color: aliceblue;
-  overflow-y: scroll;
-  margin: 10px;
-  height: 70vh;
-}
-.containerr .right-aside .scroll .card {
+.containerr .right-aside .card {
   background-color: white;
   padding: 5px;
   margin: 5px;
 }
-.containerr .right-aside .scroll .card a {
+.containerr .right-aside .card summary {
+  transition: all 1s ease;
   text-align: center;
   text-decoration: none;
-  font-size: 18px;
+  font-size: small;
   top: 10px;
   right: 10px;
   background-color: #28a745;
@@ -146,15 +236,29 @@
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.containerr .right-aside .scroll .card a:hover {
-  background-color: #0c7425;
+.containerr .right-aside .card summary:hover {
+  background-color: #0f8f2d;
 }
-.containerr .right-aside .scroll .card p {
-  font-size: medium;
+.containerr .right-aside .card p {
+  font-size: small;
+}
+.containerr .right-aside h4 {
+  font-size: large;
+  color: white;
+  font-weight: bold;
+}
+.containerr .right-aside h4 {
+  font-size: large;
 }
 .containerr .low-content {
+  height: auto;
   grid-area: low-content;
   padding: 10px;
+}
+.containerr .low-content h3 {
+  color: white;
+  font-weight: bold;
+  text-decoration: underline;
 }
 .containerr .low-content .gallery-p {
   display: grid;
@@ -163,22 +267,25 @@
   grid-template-rows: auto;
 }
 .containerr .low-content .gallery-p .card {
-  width: 100%;
+  width: auto;
   height: fit-content;
 }
-.containerr .low-content .gallery-p .card p {
+.containerr .low-content .gallery-p .card a {
   font-size: medium;
+}
+.containerr .low-content .gallery-p .card p {
+  font-size: small;
 }
 
 footer {
   align-content: center;
   height: 50px;
-  background-color: gray;
+  background-color: rgb(77, 76, 76);
 }
 footer p {
   color: white;
   text-align: center;
-  text-shadow: 3px 3px 3px rgb(189, 187, 187);
+  text-shadow: 3px 3px 3px rgb(206, 204, 204);
 }
 
 @media (max-width: 678px) {

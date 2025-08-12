@@ -1,9 +1,77 @@
+$color1: #2c003e;
+$color2: #0a4b69;
+$color3: #270b74;
+$animation-duration: 5s;
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: linear-gradient(-45deg, $color1, $color2, $color3, $color1);
+    background-size: 400% 400%;
+    animation: gradientShift $animation-duration ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+header {
+    .navbar {
+        background-color: transparent; // Mantiene el fondo si ya tienes uno animado
+
+        .navbar-brand {
+            color: #00ff4c; // Color vibrante para el logo
+            font-weight: bold;
+
+            &:hover {
+                color: #ffffff; // Cambio al pasar el mouse
+            }
+        }
+
+        li {
+            font-weight: bold;
+        }
+
+        .nav-link {
+            color: #e4e1e1; // Color suave para los links
+
+            &.active {
+                color: #00ff4c; // Color destacado para el link activo
+            }
+
+            &:hover {
+                color: #ffffff; // Cambio al pasar el mouse
+            }
+        }
+
+        .navbar-toggler-icon {
+            filter: invert(100%); // Hace que el ícono del menú sea blanco
+        }
+    }
+}
+
+
 .containerr {
     header {
         grid-area: header;
     }
 
     .banner {
+        max-height: 30vh;
         border-color: grey;
         border-radius: 10px;
         border-width: 1px;
@@ -52,51 +120,44 @@
     .left-aside {
         grid-area: left-aside;
 
-        h4 {
-            font-size: large;
+        .card {
+            background-color: white;
+            padding: 5px;
+            margin: 5px;
+
+            summary {
+                transition: all 1s ease;
+                text-align: center;
+                text-decoration: none;
+                font-size: small;
+                top: 10px;
+                right: 10px;
+                background-color: #28a745;
+                /* Verde tipo Bootstrap */
+                color: white;
+                border: none;
+                padding: 8px 2px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            summary:hover {
+                background-color: #0f8f2d;
+            }
+
+            p {
+                font-size: small;
+            }
+
         }
 
-        .scroll {
-            box-shadow: 4px 4px 5px rgba(128, 128, 128, 0.575);
-            border-radius: 0px;
-            border-width: 1px;
-            border-style: solid;
-            border-color: rgba(34, 64, 161, 0.459);
-            background-color: aliceblue;
-            overflow-y: scroll;
-            margin: 10px;
-            height: 75vh;
 
-            .card {
-                background-color: white;
-                padding: 5px;
-                margin: 5px;
-
-                a {
-                    text-align: center;
-                    text-decoration: none;
-                    font-size: 18px;
-                    top: 10px;
-                    right: 10px;
-                    background-color: #28a745;
-                    /* Verde tipo Bootstrap */
-                    color: white;
-                    border: none;
-                    padding: 8px 2px;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    font-weight: bold;
-                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                }
-
-                a:hover {
-                    background-color: #0c7425;
-                }
-
-                p {
-                    font-size: medium;
-                }
-            }
+        h4 {
+            font-size: large;
+            color: white;
+            font-weight: bold;
         }
 
     }
@@ -111,64 +172,143 @@
     }
 
     main {
-        background-color: rgba(0, 0, 255, 0.342);
+        border-radius: 20px;
+        box-shadow: 2px 2px 3px grey;
+        background-color: white;
         grid-area: main;
+        padding: 20px;
+
+        button {
+            margin-top: 25px;
+            padding: 12px;
+            background-color: #ff00cc;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #e600b5;
+            }
+        }
+
+        h2 {
+            font-size: larger;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p {
+            font-size: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin-top: 15px;
+                font-size: 15px;
+                font-weight: bold;
+                color: #ff99dd;
+            }
+
+            input,
+            textarea {
+
+                padding: 8px;
+                border: none;
+                border-radius: 8px;
+                background-color: #1e1e2f;
+                color: #fff;
+                font-size: 15px;
+                transition: box-shadow 0.3s ease;
+
+                &::placeholder {
+                    color: #aaa;
+                }
+
+                &:focus {
+                    outline: none;
+                    box-shadow: 0 0 10px #04924b;
+                }
+            }
+
+            textarea {
+                resize: none;
+            }
+
+        }
+
     }
 
     .right-aside {
         grid-area: right-aside;
 
-        h4 {
-            font-size: large;
+
+        .card {
+            background-color: white;
+            padding: 5px;
+            margin: 5px;
+
+            summary {
+                transition: all 1s ease;
+                text-align: center;
+                text-decoration: none;
+                font-size: small;
+                top: 10px;
+                right: 10px;
+                background-color: #28a745;
+                /* Verde tipo Bootstrap */
+                color: white;
+                border: none;
+                padding: 8px 2px;
+                border-radius: 5px;
+                cursor: pointer;
+                font-weight: bold;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            summary:hover {
+                background-color: #0f8f2d;
+            }
+
+            p {
+                font-size: small;
+            }
+
         }
 
-        .scroll {
-            box-shadow: 4px 4px 5px rgba(128, 128, 128, 0.575);
-            border-radius: 0px;
-            border-width: 1px;
-            border-style: solid;
-            border-color: rgba(34, 64, 161, 0.459);
-            background-color: aliceblue;
-            overflow-y: scroll;
-            margin: 10px;
-            height: 70vh;
 
-            .card {
-                background-color: white;
-                padding: 5px;
-                margin: 5px;
+        h4 {
+            font-size: large;
+            color: white;
+            font-weight: bold;
+        }
 
-                a {
-                    text-align: center;
-                    text-decoration: none;
-                    font-size: 18px;
-                    top: 10px;
-                    right: 10px;
-                    background-color: #28a745;
-                    /* Verde tipo Bootstrap */
-                    color: white;
-                    border: none;
-                    padding: 8px 2px;
-                    border-radius: 5px;
-                    cursor: pointer;
-                    font-weight: bold;
-                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-                }
 
-                a:hover {
-                    background-color: #0c7425;
-                }
 
-                p {
-                    font-size: medium;
-                }
-            }
+        h4 {
+            font-size: large;
         }
     }
 
     .low-content {
+        height: auto;
         grid-area: low-content;
         padding: 10px;
+
+        h3 {
+            color: white;
+            font-weight: bold;
+            text-decoration: underline;
+        }
 
         .gallery-p {
             display: grid;
@@ -177,11 +317,15 @@
             grid-template-rows: auto;
 
             .card {
-                width: 100%;
+                width: auto;
                 height: fit-content;
 
-                p {
+                a {
                     font-size: medium;
+                }
+
+                p {
+                    font-size: small;
                 }
             }
         }
@@ -190,7 +334,7 @@
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: 1fr 4fr 1fr;
-    height: 100vh;
+    height: auto;
     grid-template-areas: "left-aside banner right-aside"
     "left-aside main right-aside"
     "left-aside low-content right-aside";
@@ -203,12 +347,12 @@
 footer {
     align-content: center;
     height: 50px;
-    background-color: gray;
+    background-color: rgb(77, 76, 76);
 
     p {
         color: white;
         text-align: center;
-        text-shadow: 3px 3px 3px rgb(189, 187, 187);
+        text-shadow: 3px 3px 3px rgb(206, 204, 204);
     }
 }
 
