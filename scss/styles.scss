@@ -1,18 +1,18 @@
-$color1: #2c003e;
-$color2: #0a4b69;
+$color1: #881602;
+$color2: #69180a;
 $color3: #270b74;
 $animation-duration: 5s;
 
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: auto;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
     background: linear-gradient(-45deg, $color1, $color2, $color3, $color1);
     background-size: 400% 400%;
-    animation: gradientShift $animation-duration ease infinite;
+    animation: gradientShift $animation-duration ease both infinite;
 }
 
 @keyframes gradientShift {
@@ -66,9 +66,6 @@ header {
 
 
 .containerr {
-    header {
-        grid-area: header;
-    }
 
     .banner {
         max-height: 100vh;
@@ -83,6 +80,10 @@ header {
         display: grid;
         grid-template-columns: 1fr;
 
+        h5 {
+            font-size: large;
+        }
+
         .gallery-t {
             display: grid;
             grid-template-columns: 25% 25% 25% 25%;
@@ -92,18 +93,18 @@ header {
                 height: fit-content;
 
                 p {
-                    margin: 3%;
-                    font-size: medium;
+                    padding: 10px;
+                    font-size: small;
                 }
 
                 a {
-                    margin: 3%;
+                    margin: 10px 10px 0px 10px;
                     text-align: center;
                     text-decoration: none;
-                    font-size: 18px;
+                    font-size: medium;
                     top: 10px;
                     right: 10px;
-                    background-color: #28a745;
+                    background-color: #2874a7;
                     /* Verde tipo Bootstrap */
                     color: white;
                     border: none;
@@ -112,6 +113,10 @@ header {
                     cursor: pointer;
                     font-weight: bold;
                     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                }
+
+                a:hover {
+                    background-color: #0a2435;
                 }
             }
         }
@@ -502,7 +507,7 @@ footer {
 
 }
 
-main{
+main {
     .presentacion {
         margin: 10px;
         background-color: darkblue;
@@ -607,6 +612,15 @@ main{
             "right-aside"
             "low-content";
 
+        .banner {
+            padding: 5px;
+            grid-template-columns: 100%;
+
+            .gallery-t {
+                grid-template-columns: auto;
+            }
+        }
+
         .left-aside {
             margin: 10px;
             height: auto;
@@ -615,6 +629,16 @@ main{
         .right-aside {
             margin: 10px;
             height: auto;
+        }
+
+        .low-content {
+            .gallery-p {
+                grid-template-columns: auto;
+                .card{
+                    width: auto;
+                    
+                }
+            }
         }
     }
 }

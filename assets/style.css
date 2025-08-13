@@ -1,13 +1,13 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: auto;
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
-  background: linear-gradient(-45deg, #2c003e, #0a4b69, #270b74, #2c003e);
+  background: linear-gradient(-45deg, #881602, #69180a, #270b74, #881602);
   background-size: 400% 400%;
-  animation: gradientShift 5s ease infinite;
+  animation: gradientShift 5s ease both infinite;
 }
 
 @keyframes gradientShift {
@@ -58,9 +58,6 @@ header .navbar .navbar-toggler-icon {
   font-weight: 600;
   font-size: 20px;
 }
-.containerr header {
-  grid-area: header;
-}
 .containerr .banner {
   max-height: 100vh;
   border-color: grey;
@@ -74,6 +71,9 @@ header .navbar .navbar-toggler-icon {
   display: grid;
   grid-template-columns: 1fr;
 }
+.containerr .banner h5 {
+  font-size: large;
+}
 .containerr .banner .gallery-t {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
@@ -83,17 +83,17 @@ header .navbar .navbar-toggler-icon {
   height: fit-content;
 }
 .containerr .banner .gallery-t .card p {
-  margin: 3%;
-  font-size: medium;
+  padding: 10px;
+  font-size: small;
 }
 .containerr .banner .gallery-t .card a {
-  margin: 3%;
+  margin: 10px 10px 0px 10px;
   text-align: center;
   text-decoration: none;
-  font-size: 18px;
+  font-size: medium;
   top: 10px;
   right: 10px;
-  background-color: #28a745;
+  background-color: #2874a7;
   /* Verde tipo Bootstrap */
   color: white;
   border: none;
@@ -102,6 +102,9 @@ header .navbar .navbar-toggler-icon {
   cursor: pointer;
   font-weight: bold;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.containerr .banner .gallery-t .card a:hover {
+  background-color: #0a2435;
 }
 .containerr .left-aside {
   grid-area: left-aside;
@@ -496,6 +499,13 @@ main .gallery .card .fn img {
     grid-template-columns: 1fr;
     grid-template-areas: "banner" "left-aside" "main" "right-aside" "low-content";
   }
+  .containerr .banner {
+    padding: 5px;
+    grid-template-columns: 100%;
+  }
+  .containerr .banner .gallery-t {
+    grid-template-columns: auto;
+  }
   .containerr .left-aside {
     margin: 10px;
     height: auto;
@@ -503,6 +513,12 @@ main .gallery .card .fn img {
   .containerr .right-aside {
     margin: 10px;
     height: auto;
+  }
+  .containerr .low-content .gallery-p {
+    grid-template-columns: auto;
+  }
+  .containerr .low-content .gallery-p .card {
+    width: auto;
   }
 }
 
