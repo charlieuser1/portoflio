@@ -85,6 +85,7 @@ header {
         }
 
         .gallery-t {
+            overflow: hidden;
             display: grid;
             grid-template-columns: 25% 25% 25% 25%;
 
@@ -361,152 +362,6 @@ footer {
     }
 }
 
-.habilidades {
-    h2 {
-        color: white;
-    }
-
-    h3 {
-        color: white;
-    }
-
-    .Title-G {
-        margin: 10px;
-
-        h2 {
-            text-decoration: underline;
-            font-weight: bold;
-        }
-    }
-
-    .row {
-        h3 {
-            margin-left: 10px;
-            font-size: 20px;
-            font-weight: bold;
-            display: flex;
-        }
-
-        .l1 {
-            border-radius: 10px;
-            border-color: grey;
-            border-width: 1px;
-            border-style: solid;
-            padding: 10px;
-            background-color: whitesmoke;
-            margin: 10px;
-        }
-
-        .l2 {
-
-            border-radius: 10px;
-            border-color: grey;
-            border-width: 1px;
-            border-style: solid;
-            padding: 10px;
-            background-color: whitesmoke;
-            margin: 10px;
-        }
-
-        .l3 {
-            border-radius: 10px;
-            border-color: grey;
-            border-width: 1px;
-            border-style: solid;
-            padding: 10px;
-            background-color: whitesmoke;
-            margin: 10px;
-        }
-
-        .l4 {
-            border-radius: 10px;
-            border-color: grey;
-            border-width: 1px;
-            border-style: solid;
-            padding: 10px;
-            background-color: whitesmoke;
-            margin: 10px;
-
-            img {
-                width: 100%;
-                height: auto;
-            }
-        }
-
-        .l5 {
-            border-radius: 10px;
-            border-color: grey;
-            border-width: 1px;
-            border-style: solid;
-            padding: 10px;
-            background-color: whitesmoke;
-            margin: 10px;
-        }
-
-        .d1 {
-            border-radius: 10px;
-            border-color: grey;
-            border-width: 1px;
-            border-style: solid;
-            padding: 10px;
-            background-color: whitesmoke;
-            margin: 10px;
-        }
-
-        .d2 {
-            border-radius: 10px;
-            border-color: grey;
-            border-width: 1px;
-            border-style: solid;
-            padding: 10px;
-            background-color: whitesmoke;
-            margin: 10px;
-        }
-
-        .d3 {
-            border-radius: 10px;
-            border-color: grey;
-            border-width: 1px;
-            border-style: solid;
-            padding: 10px;
-            background-color: whitesmoke;
-            margin: 10px;
-        }
-
-        .d4 {
-            border-radius: 10px;
-            border-color: grey;
-            border-width: 1px;
-            border-style: solid;
-            padding: 10px;
-            background-color: whitesmoke;
-            margin: 10px;
-        }
-
-        .d5 {
-            border-radius: 10px;
-            border-color: grey;
-            border-width: 1px;
-            border-style: solid;
-            padding: 10px;
-            background-color: whitesmoke;
-            margin: 10px;
-        }
-
-        .d6 {
-            border-radius: 10px;
-            border-color: grey;
-            border-width: 1px;
-            border-style: solid;
-            padding: 10px;
-            background-color: whitesmoke;
-            margin: 10px;
-        }
-
-    }
-
-}
-
 main {
     .presentacion {
         margin: 10px;
@@ -546,6 +401,159 @@ main {
             }
         }
 
+    }
+
+    .habilidades {
+        h2 {
+            color: white;
+        }
+
+        .Title-G {
+            h2 {
+                font-size: larger;
+            }
+
+            .grid {
+                .UX {
+                    margin: 20px;
+                    height: auto;
+                    display: grid;
+                    grid-template-rows: auto auto auto;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    height: auto;
+                    grid-template-areas: "l1 l2 l3"
+                        "l4 l4 l5";
+                    grid-gap: 10px;
+                    padding: 0px 10px;
+                    font-weight: 500;
+                    font-size: 20px;
+
+                    h4 {
+                        font-size: medium;
+                        font-weight: bold;
+                    }
+
+                    p {
+                        font-size: small;
+                    }
+
+                    .l1 {
+
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: white;
+                        grid-area: l1;
+                    }
+
+                    .l2 {
+                        grid-area: l2;
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: white;
+                    }
+
+                    .l3 {
+                        grid-area: l3;
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: white;
+                    }
+
+                    .l4 {
+                        grid-area: l4;
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: white;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .l5 {
+                        grid-area: l5;
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: white;
+
+                    }
+
+                }
+            }
+
+            .grid2 {
+
+                .Desarrollo_web {
+                    margin: 20px;
+                    height: auto;
+                    display: grid;
+                    grid-template-rows: auto auto auto;
+                    grid-template-columns: 1fr 4fr 1fr;
+                    height: auto;
+                    grid-template-areas: "d2 d1 d3"
+                        "d4 d5 d6";
+                    grid-gap: 10px;
+                    padding: 0px 10px;
+                    font-weight: 500;
+                    font-size: 20px;
+
+                    h4 {
+                        font-weight: bold;
+                        font-size: medium;
+                    }
+
+                    p {
+                        font-size: small;
+                    }
+
+                    .d1 {
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: white;
+                        grid-area: d1;
+                    }
+
+                    .d2 {
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: white;
+                        grid-area: d2;
+                    }
+
+                    .d3 {
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: white;
+                        grid-area: d3;
+                    }
+
+                    .d4 {
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: white;
+                        grid-area: d4;
+                    }
+
+                    .d5 {
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: white;
+                        grid-area: d5;
+                    }
+
+                    .d6 {
+                        padding: 10px;
+                        border-radius: 10px;
+                        background-color: white;
+                        grid-area: d6;
+                    }
+                }
+            }
+        }
+
+        h3 {
+            color: white;
+        }
     }
 
     .gallery {
@@ -634,9 +642,39 @@ main {
         .low-content {
             .gallery-p {
                 grid-template-columns: auto;
-                .card{
+
+                .card {
                     width: auto;
-                    
+
+                }
+            }
+        }
+    }
+
+    main {
+        .habilidades {
+            align-items: center;
+
+            .Title-G {
+                .grid {
+                    .UX {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+
+                .grid2 {
+                    .Desarrollo_web {
+                        grid-template-columns: auto;
+                        grid-template-areas:
+                            "d2"
+                            "d1"
+                            "d3"
+                            "d4"
+                            "d5"
+                            "d6"
+                        ;
+                    }
                 }
             }
         }
