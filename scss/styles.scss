@@ -1,3 +1,4 @@
+@use"caffeish.scss";
 $color1: #881602;
 $color2: #69180a;
 $color3: #270b74;
@@ -38,7 +39,8 @@ header {
             font-weight: bold;
 
             &:hover {
-                color: #ffffff; // Cambio al pasar el mouse
+                color: #a4ffbf; // Cambio al pasar el mouse
+                text-shadow: #c8ddda 2px 2px 5px;
             }
         }
 
@@ -50,11 +52,12 @@ header {
             color: #e4e1e1; // Color suave para los links
 
             &.active {
-                color: #00ff4c; // Color destacado para el link activo
+                color: #00ffff; // Color destacado para el link activo
             }
 
             &:hover {
                 color: #ffffff; // Cambio al pasar el mouse
+                text-shadow: #c8ddda 2px 2px 5px;
             }
         }
 
@@ -80,6 +83,15 @@ header {
         display: grid;
         grid-template-columns: 1fr;
 
+        .sub-text {
+            p {
+                font-size: small;
+                font-weight: lighter;
+                margin-top: -10px;
+                margin-bottom: 10px;
+            }
+        }
+
         h5 {
             font-size: large;
         }
@@ -88,6 +100,7 @@ header {
             overflow: hidden;
             display: grid;
             grid-template-columns: 25% 25% 25% 25%;
+            gap: 10px;
 
             .card {
                 width: 100%;
@@ -209,9 +222,10 @@ header {
         }
 
         p {
+
             font-size: 15px;
             margin-bottom: 20px;
-            text-align: center;
+            text-align: left;
         }
 
         form {

@@ -1,0 +1,105 @@
+.caffeish {
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 3%;
+    margin-left: 3%;
+    margin-right: 3%;
+
+
+
+    .caff1 {
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10xp;
+        background-color: aliceblue;
+        grid-area: left-content;
+
+        h2 {
+            text-decoration: underline;
+            font-style: italic;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 400;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    }
+
+    .caff2 {
+        border-radius: 10px;
+        background-color: aliceblue;
+        grid-area: rigth-content;
+        padding: 10px;
+
+        .boton-w {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            a {
+                background-color: blue;
+                color: white;
+                border-style: solid;
+                border-color: black;
+                border-width: 2px;
+                padding: 3px;
+                border-radius: 5px;
+                text-align: center;
+                margin: 5px;
+                font-size: 15px;
+                font-weight: bold;
+                text-wrap: nowrap;
+                text-decoration: none;
+                &:hover {
+                    background-color:rgb(107, 107, 255);
+                }
+            }
+        }
+    }
+
+    .caff3 {
+        border-radius: 10px;
+        background-color: aliceblue;
+        grid-area: low-content;
+
+        h3 {
+            font-size: large;
+            font-weight: 400;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container {
+            display:none;
+        }
+        .container:target {
+            display:block;
+        }
+    }
+
+
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 4fr 1fr;
+    height: auto;
+    grid-template-areas: "left-content left-content rigth-content"
+    " left-content left-content rigth-content"
+    " low-content low-content low-content"
+    ;
+    grid-gap: 10px;
+    font-weight: 600;
+    font-size: 20px;
+}
+@media (max-width: 678px){
+    .caffeish {
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr 1fr;
+        height: auto;
+        grid-template-areas:
+        "left-content left-content"
+        "rigth-content rigth-content"
+        "low-content low-content"
+        ;
+    }
+}

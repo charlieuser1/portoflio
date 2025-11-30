@@ -1,3 +1,93 @@
+.caffeish {
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+.caffeish .caff1 {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10xp;
+  background-color: aliceblue;
+  grid-area: left-content;
+}
+.caffeish .caff1 h2 {
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 18px;
+}
+.caffeish .caff1 p {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.caffeish .caff2 {
+  border-radius: 10px;
+  background-color: aliceblue;
+  grid-area: rigth-content;
+  padding: 10px;
+}
+.caffeish .caff2 .boton-w {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.caffeish .caff2 .boton-w a {
+  background-color: blue;
+  color: white;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  padding: 3px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  text-wrap: nowrap;
+  text-decoration: none;
+}
+.caffeish .caff2 .boton-w a:hover {
+  background-color: rgb(107, 107, 255);
+}
+.caffeish .caff3 {
+  border-radius: 10px;
+  background-color: aliceblue;
+  grid-area: low-content;
+}
+.caffeish .caff3 h3 {
+  font-size: large;
+  font-weight: 400;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.caffeish .caff3 .container {
+  display: none;
+}
+.caffeish .caff3 .container:target {
+  display: block;
+}
+.caffeish {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 4fr 1fr;
+  height: auto;
+  grid-template-areas: "left-content left-content rigth-content" " left-content left-content rigth-content" " low-content low-content low-content";
+  grid-gap: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+@media (max-width: 678px) {
+  .caffeish {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    grid-template-areas: "left-content left-content" "rigth-content rigth-content" "low-content low-content";
+  }
+}
 body {
   margin: 0;
   padding: 0;
@@ -29,7 +119,8 @@ header .navbar .navbar-brand {
   font-weight: bold;
 }
 header .navbar .navbar-brand:hover {
-  color: #ffffff;
+  color: #a4ffbf;
+  text-shadow: #c8ddda 2px 2px 5px;
 }
 header .navbar li {
   font-weight: bold;
@@ -38,26 +129,16 @@ header .navbar .nav-link {
   color: #e4e1e1;
 }
 header .navbar .nav-link.active {
-  color: #00ff4c;
+  color: #00ffff;
 }
 header .navbar .nav-link:hover {
   color: #ffffff;
+  text-shadow: #c8ddda 2px 2px 5px;
 }
 header .navbar .navbar-toggler-icon {
   filter: invert(100%);
 }
 
-.containerr {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  grid-template-columns: 1fr 4fr 1fr;
-  height: auto;
-  grid-template-areas: "left-aside banner right-aside" "left-aside main right-aside" "left-aside low-content right-aside";
-  grid-gap: 10px;
-  padding: 0px 10px;
-  font-weight: 600;
-  font-size: 20px;
-}
 .containerr .banner {
   max-height: 100vh;
   border-color: grey;
@@ -71,6 +152,12 @@ header .navbar .navbar-toggler-icon {
   display: grid;
   grid-template-columns: 1fr;
 }
+.containerr .banner .sub-text p {
+  font-size: small;
+  font-weight: lighter;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
 .containerr .banner h5 {
   font-size: large;
 }
@@ -78,6 +165,7 @@ header .navbar .navbar-toggler-icon {
   overflow: hidden;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
+  gap: 10px;
 }
 .containerr .banner .gallery-t .card {
   width: 100%;
@@ -181,7 +269,7 @@ header .navbar .navbar-toggler-icon {
 .containerr main p {
   font-size: 15px;
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
 }
 .containerr main form {
   display: flex;
@@ -191,7 +279,7 @@ header .navbar .navbar-toggler-icon {
   margin-top: 15px;
   font-size: 15px;
   font-weight: bold;
-  color: #ff99dd;
+  color: #b10778;
 }
 .containerr main form input,
 .containerr main form textarea {
@@ -279,6 +367,17 @@ header .navbar .navbar-toggler-icon {
 }
 .containerr .low-content .gallery-p .card p {
   font-size: small;
+}
+.containerr {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 4fr 1fr;
+  height: auto;
+  grid-template-areas: "left-aside banner right-aside" "left-aside main right-aside" "left-aside low-content right-aside";
+  grid-gap: 10px;
+  padding: 0px 10px;
+  font-weight: 600;
+  font-size: 20px;
 }
 
 footer {
